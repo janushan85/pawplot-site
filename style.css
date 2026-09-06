@@ -1,0 +1,80 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1c1917;
+  --muted: #6b6560;
+  --rule: #e7e2dc;
+  --link: #b4451f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17140f;
+    --fg: #ede8e1;
+    --muted: #9a938b;
+    --rule: #322c25;
+    --link: #ff8a65;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic",
+    "Noto Sans KR", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+nav, main, footer { max-width: 44rem; margin: 0 auto; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9375rem;
+}
+
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--link); text-decoration: underline; }
+nav [aria-current="page"] { color: var(--fg); font-weight: 600; }
+
+h1 { margin: 2.5rem 0 0; font-size: 1.75rem; line-height: 1.4; letter-spacing: -0.01em; }
+
+h2 {
+  margin: 2.75rem 0 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+p { margin: 0 0 1rem; }
+p.effective { margin: 0.5rem 0 2rem; color: var(--muted); font-size: 0.9375rem; }
+
+ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+a { color: var(--link); }
+strong { font-weight: 600; }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 40rem) {
+  body { font-size: 17px; }
+  h1 { font-size: 2rem; }
+}
