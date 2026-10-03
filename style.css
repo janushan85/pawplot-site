@@ -342,6 +342,7 @@ a:hover { color: var(--link-hover); }
 }
 
 @media (min-width: 62rem) {
+  .head-row { padding-top: 22px; padding-bottom: 22px; }
   .hero-grid { grid-template-columns: 1fr minmax(0, 320px); gap: 40px; align-items: end; padding-top: 64px; }
   .hero-copy { padding-bottom: 56px; }
   .cards { grid-template-columns: repeat(4, 1fr); }
