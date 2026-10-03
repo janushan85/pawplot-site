@@ -306,19 +306,24 @@ a:hover { color: var(--link-hover); }
 .card h3 { font-family: var(--pixel); font-size: 15.5px; line-height: 1.5; margin: 0; }
 .card p { margin: 0; font-size: 15.5px; color: #4A3E2C; }
 
-.split { display: grid; gap: 32px; border-top: 3px solid var(--ink); margin-top: 44px; padding-top: 34px; }
-.split h2 { margin-bottom: 16px; }
-.ticks, .dots { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.ticks li, .dots li { display: flex; gap: 10px; font-size: 15.5px; color: #4A3E2C; }
-.ticks i { width: 9px; height: 9px; background: var(--gold); flex: none; margin-top: 9px; }
+.dots { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.dots li { display: flex; gap: 10px; font-size: 15.5px; color: #4A3E2C; }
 .dots i { width: 7px; height: 7px; background: var(--sand); flex: none; margin-top: 10px; }
-.note { margin: 18px 0 0; font-size: 15px; color: var(--muted); }
 
-.contact { background: var(--ink); padding: 20px; }
-.contact-lead { margin: 0 0 10px; font-size: 14px; color: var(--sand); }
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
+  background: var(--ink);
+  padding: 20px;
+}
+.contact > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.contact-title { font-family: var(--pixel); font-size: 16px; color: var(--card); }
+.contact-lead { font-size: 14px; color: var(--sand); }
 .contact-mail { font-family: var(--pixel); font-size: 15px; color: var(--gold); text-decoration: none; word-break: break-all; }
 .contact-mail:hover { color: #FF8A7A; }
-.contact-note { margin: 14px 0 0; font-size: 14px; color: var(--dim); }
+.contact-note { margin: 0; font-size: 14px; color: var(--dim); }
 .contact-note a { color: #FF8A7A; }
 
 /* ── 문서 ─────────────────────────────────────────────── */
@@ -377,8 +382,8 @@ a:hover { color: var(--link-hover); }
   .cards { gap: 20px; }
   .card { padding: 24px; }
   .block { padding-top: 60px; }
-  .split { grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 56px; padding-top: 40px; }
   .contact { padding: 22px 24px; }
+  .contact-note { margin-left: auto; }
   .doc { padding: 48px 24px 0; }
 }
 
