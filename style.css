@@ -52,16 +52,8 @@ a:hover { color: var(--link-hover); }
   padding-bottom: 14px;
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand-mark {
-  display: flex;
-  width: 38px;
-  height: 38px;
-  background: var(--card);
-  border: 3px solid var(--ink);
-  box-shadow: 3px 3px 0 var(--ink);
-  flex: none;
-}
-.brand-mark img { display: block; width: 32px; height: 32px; image-rendering: pixelated; }
+.brand-mark { display: flex; flex: none; }
+.brand-mark img { display: block; width: 40px; height: 40px; }
 .brand-name { font-family: var(--pixel); font-size: 20px; color: var(--ink); letter-spacing: 1px; }
 .site-nav {
   display: flex;
