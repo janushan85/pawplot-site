@@ -66,6 +66,41 @@ a:hover { color: var(--link-hover); }
 .site-nav a:hover { color: var(--link); }
 .site-nav [aria-current="page"] { color: var(--ink); font-weight: 700; }
 
+/* 좁은 화면은 메뉴를 버튼 뒤에 접는다. JS 가 없으면(.js 없음) 접지 않는다 — 약관이 안 보이면 안 된다 */
+.nav-toggle { display: none; }
+@media not all and (min-width: 40rem) {
+  .js .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 40px;
+    height: 40px;
+    padding: 0 9px;
+    margin-left: auto;
+    background: var(--card);
+    border: 3px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    cursor: pointer;
+  }
+  .nav-toggle span { display: block; height: 3px; background: var(--ink); }
+  .nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .js .site-nav { display: none; }
+  .js .nav-open .site-nav {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    gap: 0;
+    margin: 0;
+    font-size: 16px;
+    border-top: 2px solid var(--rule);
+  }
+  .js .nav-open .site-nav > * { padding: 12px 0; border-bottom: 2px solid var(--rule); }
+  .js .nav-open .site-nav > :last-child { border-bottom: 0; padding-bottom: 0; }
+}
+
 /* ── 히어로 ───────────────────────────────────────────── */
 .hero { border-bottom: 3px solid var(--ink); background: var(--ink); }
 .hero-grid { display: grid; gap: 28px; padding-top: 40px; }
