@@ -292,8 +292,7 @@ a:hover { color: var(--link-hover); }
 
 /* ── 본문 블록 ────────────────────────────────────────── */
 .block { padding-top: 44px; }
-.block h2 { font-family: var(--pixel); font-size: 20px; line-height: 1.5; margin: 0 0 8px; }
-.block-lead { margin: 0 0 24px; color: var(--muted); font-size: 15px; }
+.block h2 { font-family: var(--pixel); font-size: 20px; line-height: 1.5; margin: 0 0 20px; }
 
 .cards { display: grid; gap: 16px; }
 .card {
@@ -375,7 +374,7 @@ a:hover { color: var(--link-hover); }
   body { font-size: 17px; }
   .wrap { padding: 0 24px; }
   .phone { --u: 3.7px; }
-  .cards { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cards { gap: 20px; }
   .card { padding: 24px; }
   .block { padding-top: 60px; }
   .split { grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 56px; padding-top: 40px; }
@@ -387,5 +386,5 @@ a:hover { color: var(--link-hover); }
   .head-row { padding-top: 22px; padding-bottom: 22px; }
   .hero-grid { grid-template-columns: 1fr minmax(0, 320px); gap: 40px; align-items: end; padding-top: 64px; }
   .hero-copy { padding-bottom: 56px; }
-  .cards { grid-template-columns: repeat(4, 1fr); }
+  .cards { grid-template-columns: repeat(3, 1fr); }
 }
