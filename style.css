@@ -88,17 +88,25 @@ a:hover { color: var(--link-hover); }
   .nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
   .nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .js .site-nav { display: none; }
+  /* 펼치면 버튼 아래 오른쪽에 카드로 뜬다 — 본문을 밀지 않고 위에 덮는다 */
+  .head-row { position: relative; }
   .js .nav-open .site-nav {
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
     gap: 0;
-    margin: 0;
+    position: absolute;
+    top: calc(100% - 4px);
+    right: 18px;
+    z-index: 10;
+    min-width: 200px;
+    padding: 6px 18px;
     font-size: 16px;
-    border-top: 2px solid var(--rule);
+    background: var(--card);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
   }
-  .js .nav-open .site-nav > * { padding: 12px 0; border-bottom: 2px solid var(--rule); }
-  .js .nav-open .site-nav > :last-child { border-bottom: 0; padding-bottom: 0; }
+  .js .nav-open .site-nav > * { padding: 11px 0; border-bottom: 2px solid var(--rule); }
+  .js .nav-open .site-nav > :last-child { border-bottom: 0; }
 }
 
 /* ── 히어로 ───────────────────────────────────────────── */
