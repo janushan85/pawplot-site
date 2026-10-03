@@ -131,7 +131,6 @@ a:hover { color: var(--link-hover); }
   margin: 0 0 18px;
 }
 .hero-lead { font-size: 16.5px; line-height: 1.8; color: var(--sand); margin: 0 0 26px; max-width: 30em; }
-.hero-note { margin: 18px 0 0; font-size: 13.5px; line-height: 1.7; color: var(--dim); max-width: 26em; }
 
 .stores { display: flex; flex-wrap: wrap; gap: 12px; }
 .store {
